@@ -69,7 +69,56 @@ h1, h2, h3, h4, h5, h6 {
 button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    border: none;
+    padding: 15px 55px;
+    border-radius: 25px;
 }
+
+.white-button {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 10px #999999;
+}
+
+.pink-button {
+    color: #ffffff;
+    background-color: hsl(322, 100%, 66%);
+}
+
+/***************
+    NAV
+***************/
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+
+
+/***************
+    HEADER
+***************/
+
+header {
+    background: url(../images/bg-hero-desktop.svg);
+    padding: 25px;
+}
+
+/***************
+    HERO
+***************/
+.hero {
+    display: flex;
+}
+
+
+/***************
+    MAIN
+***************/
+
+/***************
+    SECTION
+***************/
 
 
 
