@@ -76,7 +76,11 @@ button {
 
 .white-button {
     background-color: #ffffff;
-    box-shadow: 1px 1px 10px #999999;
+    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
+}
+
+.white-button:hover {
+    box-shadow: 1px 1px 4px hsl(208, 11%, 55%);
 }
 
 .pink-button {
@@ -91,6 +95,7 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
+    margin: 0 25px;
 }
 
 
@@ -109,6 +114,9 @@ header {
 ***************/
 .hero {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 50px 25px;
 }
 
 
@@ -119,6 +127,37 @@ header {
 /***************
     SECTION
 ***************/
+section {
+    display: grid;
+    border-radius: 15px;
+    margin: 25px;
+    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
+    padding: 25px;
+}
+
+/***************
+    CTA
+***************/
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 500px;
+    padding: 25px 25px 50px 25px;
+    top: 75px;
+    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
+    margin: auto;
+    position: relative;
+    background: #ffffff;
+}
+
+.cta button {
+    width: 250px;
+
+}
 
 
 
@@ -126,5 +165,30 @@ header {
     FOOTER
 ***************/
 
+footer {
+    padding: 125px 50px 50px 50px;
+    background-color: hsl(192, 100%, 9%);
+    color: hsl(193, 100%, 96%);
+}
+
+footer a {
+    text-decoration: none;
+    color: hsl(193, 100%, 96%);
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+/******************
+    MEDIA QUERIES
+******************/
+
+@media (max-width: 600px) {
+    header {
+        background: url(../images/bg-hero-mobile.svg);
+    }
+}
