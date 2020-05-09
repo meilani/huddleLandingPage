@@ -77,6 +77,10 @@ button:hover {
     box-shadow: 1px 1px 4px #cccccc;
 }
 
+img {
+    object-fit: contain;
+}
+
 .white-button {
     background-color: #ffffff;
     padding: 15px 60px;
@@ -114,7 +118,7 @@ nav {
 
 header {
     background: url(../images/bg-hero-desktop.svg);
-    padding: 25px;
+    padding: 50px;
 }
 
 /***************
@@ -123,9 +127,35 @@ header {
 .hero {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     margin: 50px 25px;
+    max-height: 80vh;
 }
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text p, .hero-text h1 {
+    max-width: 450px;
+}
+
+.hero-text p {
+    margin-bottom: 35px;
+}
+
+.hero-text button {
+    max-width: 250px;
+}
+
+.hero-image img {
+    float: right;
+    width: 75%;
+    height: 75%;
+}
+
 
 
 /***************
@@ -226,16 +256,35 @@ footer ul li {
     MEDIA QUERIES
 ******************/
 
+@media (max-width: 1150px) {
+    .hero-text {
+        font-size: .9em;
+    }
+
+    .hero-image img {
+        width: 85%;
+        height: 85%;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 970px) {
+    .hero-text button {
+        padding: 20px 30px;
+    }
+
+}
+
 @media (max-width: 850px) {
     .hero, .section-1, .section-2 {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
-    .section-image img {
-       object-fit: contain;
+    .hero-text {
+        text-align: center;
+        width: 85%;
     }
-
 
 }
 
