@@ -70,22 +70,29 @@ button {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     border: none;
-    padding: 15px 55px;
-    border-radius: 25px;
+    border-radius: 35px;
+}
+
+button:hover {
+    box-shadow: 1px 1px 4px #cccccc;
 }
 
 .white-button {
     background-color: #ffffff;
-    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
+    padding: 15px 60px;
 }
 
-.white-button:hover {
-    box-shadow: 1px 1px 4px hsl(208, 11%, 55%);
-}
 
 .pink-button {
     color: #ffffff;
     background-color: hsl(322, 100%, 66%);
+    padding: 20px 55px;
+}
+
+button,
+section,
+.cta {
+    box-shadow: 1px 1px 10px #ccc;
 }
 
 /***************
@@ -96,6 +103,7 @@ nav {
     justify-content: space-between;
     background-color: transparent;
     margin: 0 25px;
+    align-items: center;
 }
 
 
@@ -124,16 +132,47 @@ header {
     MAIN
 ***************/
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /***************
     SECTION
 ***************/
 section {
-    display: grid;
+    display: flex;
     border-radius: 15px;
-    margin: 25px;
-    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
+    margin: 25px auto;
     padding: 25px;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1200px;
+    width: 80vw;
 }
+
+.section-1 {
+
+}
+
+.section-2 {
+    flex-direction: row-reverse;
+}
+
+.section-text {
+    margin: 5%;
+}
+
+.section-text p {
+    max-width: 450px;
+}
+
+.section-image {
+
+}
+
 
 /***************
     CTA
@@ -148,10 +187,10 @@ section {
     width: 500px;
     padding: 25px 25px 50px 25px;
     top: 75px;
-    box-shadow: 1px 1px 10px hsl(208, 11%, 55%);
     margin: auto;
     position: relative;
     background: #ffffff;
+    text-align: center;
 }
 
 .cta button {
@@ -187,8 +226,35 @@ footer ul li {
     MEDIA QUERIES
 ******************/
 
+@media (max-width: 850px) {
+    .hero, .section-1, .section-2 {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section-image img {
+       object-fit: contain;
+    }
+
+
+}
+
+
 @media (max-width: 600px) {
+    .logo-img {
+        width: 156px;
+        height: 26px;
+    }
+
+    .white-button {
+        padding: 15px 30px;
+    }
+
     header {
         background: url(../images/bg-hero-mobile.svg);
+    }
+
+    .cta {
+        width: 70%;
     }
 }
