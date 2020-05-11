@@ -50,7 +50,8 @@ For the social icons, you can use a font icon library. Some suggestions can be f
 /***************
     GENERAL
 ***************/
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,7 +62,12 @@ body {
     font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
@@ -138,7 +144,8 @@ header {
     flex-direction: column;
 }
 
-.hero-text p, .hero-text h1 {
+.hero-text p,
+.hero-text h1 {
     max-width: 450px;
 }
 
@@ -183,9 +190,7 @@ section {
     width: 80vw;
 }
 
-.section-1 {
-
-}
+.section-1 {}
 
 .section-2 {
     flex-direction: row-reverse;
@@ -199,9 +204,7 @@ section {
     max-width: 450px;
 }
 
-.section-image {
-
-}
+.section-image {}
 
 
 /***************
@@ -249,8 +252,67 @@ footer ul li {
     list-style-type: none;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col ul,
+.footer-col p {
+    margin-top: 0;
+}
+
+.footer-nav ul li,
+.contact ul li {
+    margin: 15px 0
+}
+
+.contact ul {
+    max-width: 350px;
+}
+
+.contact ul li {
+    padding-left: 15px;
+}
+
+.contact ul li:first-child {
+    list-style-image: url("../images/icon-location.svg");
+}
+.contact ul li:nth-child(2) {
+    list-style-image: url("../images/icon-phone.svg");
+}
+.contact ul li:last-child {
+    list-style-image: url("../images/icon-email.svg");
+}
+
+
+
+.footer-social ul li {
+    display: inline;
+    margin-right: 15px;
+    text-align: left;
+}
+
+.footer-copy {
+    text-align: right;
+}
+
+.attribution {
+    margin-top: 50px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
 
 /******************
     MEDIA QUERIES
@@ -275,7 +337,10 @@ footer ul li {
 }
 
 @media (max-width: 850px) {
-    .hero, .section-1, .section-2 {
+
+    .hero,
+    .section-1,
+    .section-2 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -286,6 +351,17 @@ footer ul li {
         width: 85%;
     }
 
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-nav ul {
+        padding-left: 10px;
+    }
+
+    .footer-social {
+        text-align: center;
+    }
 }
 
 
