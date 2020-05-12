@@ -161,6 +161,7 @@ header {
     float: right;
     width: 75%;
     height: 75%;
+
 }
 
 
@@ -185,12 +186,18 @@ section {
     margin: 25px auto;
     padding: 25px;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 1200px;
     width: 80vw;
 }
 
-.section-1 {}
+.section-1 {
+    flex-direction: row;
+}
+
+.section-1 img {
+    float: right;
+}
 
 .section-2 {
     flex-direction: row-reverse;
@@ -204,7 +211,10 @@ section {
     max-width: 450px;
 }
 
-.section-image {}
+.section-image img {
+    width: 65%;
+    height: 65%;
+}
 
 
 /***************
@@ -285,9 +295,11 @@ footer ul li {
 .contact ul li:first-child {
     list-style-image: url("../images/icon-location.svg");
 }
+
 .contact ul li:nth-child(2) {
     list-style-image: url("../images/icon-phone.svg");
 }
+
 .contact ul li:last-child {
     list-style-image: url("../images/icon-email.svg");
 }
@@ -339,6 +351,8 @@ footer ul li {
 @media (max-width: 850px) {
 
     .hero,
+    .hero-text,
+    .hero-image,
     .section-1,
     .section-2 {
         flex-direction: column;
@@ -346,9 +360,49 @@ footer ul li {
         align-items: center;
     }
 
+    .hero,
+    .hero-text,
+    .hero-image {
+        flex-direction: column;
+    }
+
+    .section-1,
+    .section-2 {
+        flex-direction: column-reverse;
+    }
+
+
+    header {
+        padding: 25px 10px 150px 10px;
+        margin-bottom: 50px;
+    }
+
+    nav {
+        margin-bottom: 30%;
+        margin-top: 15px;
+    }
+
     .hero-text {
+        display: flex;
         text-align: center;
         width: 85%;
+        margin-bottom: 50px;
+    }
+
+    .hero-image {
+        display: flex;
+    }
+
+    section {
+        width: 70vw;
+        text-align: center;
+    }
+
+
+    .section-image img {
+        float: none;
+        width: 85%;
+        height: 85%;
     }
 
     .footer-content {
@@ -372,11 +426,20 @@ footer ul li {
     }
 
     .white-button {
-        padding: 15px 30px;
+        padding: 10px 35px;
+    }
+
+    .pink-button {
+        padding: 15px 35px;
+        width: 100%;
     }
 
     header {
         background: url(../images/bg-hero-mobile.svg);
+    }
+
+    nav {
+        margin-bottom: 40%;
     }
 
     .cta {
