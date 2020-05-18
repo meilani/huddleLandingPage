@@ -1,51 +1,10 @@
 /*
-
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Pink: hsl(322, 100%, 66%)
-
-### Neutral
-
-- Very Pale Cyan: hsl(193, 100%, 96%)
-- Very Dark Cyan: hsl(192, 100%, 9%)
-- Grayish Blue: hsl(208, 11%, 55%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Headings
-
-- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
-- Weights: 600
-
-### Body, Call-to-actions
-
-- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
-- Weights: 400, 700
-
-## Icons
-
-For the social icons, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com/)
-- [IcoMoon](https://icomoon.io/)
-- [Ionicons](https://ionicons.com/)
-
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
 */
+
 
 /***************
     GENERAL
@@ -54,7 +13,8 @@ html,
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -80,11 +40,13 @@ button {
 }
 
 button:hover {
-    box-shadow: 1px 1px 4px #cccccc;
+    -webkit-box-shadow: 1px 1px 4px #cccccc;
+            box-shadow: 1px 1px 4px #cccccc;
 }
 
 img {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 
 .white-button {
@@ -102,18 +64,25 @@ img {
 button,
 section,
 .cta {
-    box-shadow: 1px 1px 10px #ccc;
+    -webkit-box-shadow: 1px 1px 10px #ccc;
+            box-shadow: 1px 1px 10px #ccc;
 }
 
 /***************
     NAV
 ***************/
 nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     background-color: transparent;
     margin: 0 25px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 
@@ -124,6 +93,7 @@ nav {
 
 header {
     background: url(../images/bg-hero-desktop.svg);
+    background-color: hsl(193, 100%, 96%);
     padding: 50px;
 }
 
@@ -131,17 +101,31 @@ header {
     HERO
 ***************/
 .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: 50px 25px;
     max-height: 80vh;
 }
 
 .hero-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .hero-text p,
@@ -171,28 +155,46 @@ header {
 ***************/
 
 main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 /***************
     SECTION
 ***************/
 section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-radius: 15px;
     margin: 25px auto;
     padding: 25px;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     max-width: 1200px;
     width: 80vw;
 }
 
 .section-1 {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .section-1 img {
@@ -200,7 +202,10 @@ section {
 }
 
 .section-2 {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 .section-text {
@@ -209,6 +214,7 @@ section {
 
 .section-text p {
     max-width: 450px;
+    color: hsl(208, 11%, 55%);
 }
 
 .section-image img {
@@ -222,10 +228,19 @@ section {
 ***************/
 
 .cta {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 15px;
     width: 500px;
     padding: 25px 25px 50px 25px;
@@ -263,15 +278,24 @@ footer ul li {
 }
 
 .footer-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 50px;
 
 }
 
 .footer-col {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
 }
 
 .footer-col ul,
@@ -312,6 +336,14 @@ footer ul li {
     text-align: left;
 }
 
+.fab {
+    font-size: 24px;
+}
+
+.footer-social {
+    margin-top: 15px;
+}
+
 .footer-copy {
     text-align: right;
 }
@@ -329,6 +361,12 @@ footer ul li {
 /******************
     MEDIA QUERIES
 ******************/
+
+@media (min-width: 1490px) {
+    .hero {
+        margin-top: 100px;
+    }
+}
 
 @media (max-width: 1150px) {
     .hero-text {
@@ -355,20 +393,33 @@ footer ul li {
     .hero-image,
     .section-1,
     .section-2 {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     .hero,
     .hero-text,
     .hero-image {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .section-1,
     .section-2 {
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
     }
 
 
@@ -383,6 +434,8 @@ footer ul li {
     }
 
     .hero-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         text-align: center;
         width: 85%;
@@ -390,6 +443,8 @@ footer ul li {
     }
 
     .hero-image {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
@@ -406,7 +461,10 @@ footer ul li {
     }
 
     .footer-content {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
 
     .footer-nav ul {
@@ -420,6 +478,10 @@ footer ul li {
 
 
 @media (max-width: 600px) {
+    .hero {
+        margin-top: 25px;
+    }
+
     .logo-img {
         width: 156px;
         height: 26px;
@@ -439,10 +501,17 @@ footer ul li {
     }
 
     nav {
-        margin-bottom: 40%;
+        margin-bottom: 30%;
     }
 
     .cta {
-        width: 70%;
+        width: 90%;
+        padding: 25px 0px 50px 0px;
     }
+
+    .cta h2 {
+        font-size: 1.4em;
+    }
+
+    
 }
